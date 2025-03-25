@@ -11,7 +11,7 @@ list_of_files = [
     "logs/__init__py",
     "data/__init__.py",
     "noteboook/__init__.py",
-    "deployment/__init__.py"
+    "deployment/__init__.py",
     "src/__init__.py",
     "src/exception.py",
     "src/logger.py",
