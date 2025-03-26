@@ -8,7 +8,7 @@ LOG_DIR = os.path.join(BASE_DIR, '../logs')
 
 # API Keys (Replace with actual API keys)
 YAHOO_FINANCE_API = "your_api_key"
-TWITTER_API_KEY = "your_api_key"
+TWITTER_API_KEY = "0587f5650b1b4a729f812d9a25d13382"
 
 # Model Parameters
 SEQUENCE_LENGTH = 60  # Days of historical data used for prediction

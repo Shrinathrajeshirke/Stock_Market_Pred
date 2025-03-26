@@ -1,0 +1,3 @@
+[ 2025-03-25 23:29:00,305 ] 40 root - INFO - Enter the data ingestion method
+[ 2025-03-25 23:29:02,862 ] 44 root - INFO - Exported the dataset as a dataframe
+[ 2025-03-25 23:29:03,859 ] 65 root - INFO - Ingestion of the data is completed
