@@ -1,0 +1,4 @@
+[ 2025-03-26 11:51:58,298 ] 21 root - INFO - exported the stock dataset
+[ 2025-03-26 11:51:58,432 ] 25 root - INFO - Scaling the data using standard scaler method
+[ 2025-03-26 11:51:58,605 ] 29 root - INFO - preprocessing of stock data completed
+[ 2025-03-26 11:51:58,605 ] 35 root - INFO - exporting the sentiment data

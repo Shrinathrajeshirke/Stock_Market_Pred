@@ -5,9 +5,13 @@ from src.logger import logging
 import yfinance as yf
 import pandas as pd
 import requests
-from textblob import TextBlob  # Install with: pip install textblob
+#from textblob import TextBlob  # Install with: pip install textblob
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from config import DATA_DIR
 from dataclasses import dataclass
+
+from src.preprocessing import DataPreprocessing
+from src.preprocessing import DataPreprocessingConfig
 
 @dataclass
 class DataIngestionConfig:
@@ -19,28 +23,23 @@ class DataIngestion:
         self.ingestion_config = DataIngestionConfig()
 
     def analyze_sentiment(self, text):
-        """
-        Analyzes the sentiment of a given text.
-        Returns 'Positive', 'Negative', or 'Neutral'.
-        """
-        if not isinstance(text, str) or text.strip() == "":
-            return "Neutral"
-
-        analysis = TextBlob(text)
-        sentiment_score = analysis.sentiment.polarity  # Score between -1 and +1
-
-        if sentiment_score > 0:
+        analyzer = SentimentIntensityAnalyzer()
+        sentiment_score = analyzer.polarity_scores(text)['compound']  # Score between -1 (neg) and +1 (pos)
+        
+        if sentiment_score > 0.05:
             return "Positive"
-        elif sentiment_score < 0:
+        elif sentiment_score < -0.05:
             return "Negative"
         else:
             return "Neutral"
 
-    def initiate_data_ingestion(self, ticker="^GSPC", start="2010-01-01", end="2025-01-01"):
+    def initiate_data_ingestion(self, ticker="^GSPC"):
         logging.info("Enter the data ingestion method")
         try:
             # Fetch stock price data
-            stock = yf.download(ticker, start=start, end=end)
+            stock = yf.download(ticker, start="2010-01-01", end="2025-01-01")
+            stock.reset_index(inplace=True)
+            print(stock.columns)
             logging.info("Exported the dataset as a dataframe")
             os.makedirs(os.path.dirname(self.ingestion_config.stock_data_path), exist_ok=True)
             stock.to_csv(self.ingestion_config.stock_data_path, index=False, header=True)
@@ -74,3 +73,5 @@ class DataIngestion:
 if __name__ == "__main__":
     obj = DataIngestion()
     stock_data, news_data = obj.initiate_data_ingestion()
+
+    

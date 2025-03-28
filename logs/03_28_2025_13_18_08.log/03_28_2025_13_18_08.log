@@ -1,0 +1,4 @@
+[ 2025-03-28 13:18:09,065 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2025-03-28 13:18:12,616 ] 37 root - INFO - Enter the data ingestion method
+[ 2025-03-28 13:18:14,623 ] 43 root - INFO - Exported the dataset as a dataframe
+[ 2025-03-28 13:18:17,354 ] 64 root - INFO - Ingestion of the data is completed

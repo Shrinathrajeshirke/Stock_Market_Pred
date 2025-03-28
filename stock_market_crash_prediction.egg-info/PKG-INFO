@@ -1,4 +1,4 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.1
 Name: stock-market-crash-prediction
 Version: 0.0.1
 Author: shrinath
@@ -10,6 +10,6 @@ Requires-Dist: seaborn
 Requires-Dist: scikit-learn
 Requires-Dist: yfinance
 Requires-Dist: requests
-Dynamic: author
-Dynamic: author-email
-Dynamic: requires-dist
+Requires-Dist: textblob
+Requires-Dist: tensorflow
+Requires-Dist: vadersentiment

@@ -1,0 +1,2 @@
+[ 2025-03-28 13:58:22,346 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2025-03-28 13:59:13,074 ] 83 absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 

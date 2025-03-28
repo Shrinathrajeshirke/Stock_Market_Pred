@@ -1,0 +1,5 @@
+[ 2025-03-28 13:22:08,540 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2025-03-28 13:22:11,018 ] 21 root - INFO - exported the stock dataset
+[ 2025-03-28 13:22:11,034 ] 25 root - INFO - Scaling the data using standard scaler method
+[ 2025-03-28 13:22:11,107 ] 29 root - INFO - preprocessing of stock data completed
+[ 2025-03-28 13:22:11,108 ] 35 root - INFO - exporting the sentiment data

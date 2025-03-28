@@ -1,0 +1,6 @@
+[ 2025-03-28 13:10:49,610 ] 160 numexpr.utils - INFO - NumExpr defaulting to 4 threads.
+[ 2025-03-28 13:10:56,272 ] 47 root - INFO - Enter the data ingestion method
+[ 2025-03-28 13:10:57,357 ] 181 yfinance - ERROR - 
+1 Failed download:
+[ 2025-03-28 13:10:57,357 ] 194 yfinance - ERROR - ['^GSPC']: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'fc.yahoo.com\', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001758CF1FE60>: Failed to resolve \'fc.yahoo.com\' ([Errno 11001] getaddrinfo failed)"))'))
+[ 2025-03-28 13:10:57,472 ] 53 root - INFO - Exported the dataset as a dataframe
